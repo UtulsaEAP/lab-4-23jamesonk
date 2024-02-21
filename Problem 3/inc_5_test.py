@@ -6,9 +6,6 @@ RANGE_ERRROR = "The range of integers should be inclusive."
 DOMAIN_ERROR = "The second integer should be greater than the first."
 class TestClass:
     def test_one(self,monkeypatch,capsys):
-
-        # monkeypatch the "input" function, so that it returns "Mark".
-        # This simulates the user entering "Mark" in the terminal:
         inputs = iter(["-15","10"])
         monkeypatch.setattr('builtins.input', lambda: next(inputs, '\n'))
 
